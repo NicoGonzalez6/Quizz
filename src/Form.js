@@ -120,7 +120,7 @@ const Form = () => {
         <input
           type="number"
           min={5}
-          max={30}
+          max={20}
           value={value}
           onChange={(evt) => {
             setValue(evt.target.value);

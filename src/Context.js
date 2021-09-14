@@ -83,6 +83,9 @@ const AppProvider = ({ children }) => {
       if (info.length > 1) {
         dispatch({ type: SET_LOADING, payload: false });
         dispatch({ type: SET_QUESTIONS, payload: info });
+      } else {
+        alert("please try another amount of questions");
+        dispatch({ type: SET_WAITING, payload: true });
       }
     }
   };
