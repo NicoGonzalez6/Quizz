@@ -1,0 +1,871 @@
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+}
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  border-top: 0.6em solid rgba(255, 255, 255, 0.2);
+  border-right: 0.6em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.6em solid rgba(255, 255, 255, 0.2);
+  border-left: 0.6em solid #6ccc66;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Architects Daughter", cursive;
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+.main-Container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form-container {
+  width: 100%;
+  min-height: 500px;
+  height: auto;
+  background: #fff;
+  margin: 3rem auto;
+  border-radius: 20px;
+  padding-bottom: 30px;
+}
+
+.title {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.cateogry-Container {
+  width: 90%;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categoryIMG {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  height: 240px;
+  width: 180px;
+  padding: 10px;
+}
+.categoryIMG img {
+  width: 150px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.categoryIMG:hover {
+  border-radius: 10px;
+  padding: 9px;
+  border: 1px solid rgb(194, 193, 193);
+}
+
+.categoryIMG label {
+  font-size: 20px;
+}
+
+.form-dificulty {
+  width: 180px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+
+.DificultyImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  cursor: pointer;
+  height: 240px;
+  width: 180px;
+  padding: 10px;
+}
+
+.form-dificulty img {
+  width: 180px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.DificultyImg label {
+  font-size: 20px;
+}
+
+.DificultyImg:hover {
+  border-radius: 10px;
+  padding: 9px;
+  border: 1px solid rgb(194, 193, 193);
+}
+
+.category-chosen {
+  text-align: center;
+}
+
+.chosen {
+  text-align: center;
+  color: red;
+}
+.title-difficulty {
+  text-align: center;
+}
+
+.submit-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.submit-form input {
+  height: 30px;
+  width: 80%;
+  font-size: 20px;
+  font-family: "Architects Daughter", cursive;
+}
+
+.submit-form label {
+  text-align: center;
+  font-size: 18px;
+}
+
+.btn-form {
+  font-family: "Architects Daughter", cursive;
+  background: #46b9b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  height: 30px;
+  width: 200px;
+  font-size: 18px;
+}
+
+.error-text {
+  padding-top: 30px;
+  font-size: 20px;
+  text-align: center;
+  color: red;
+}
+
+.questions-container {
+  margin: 4rem auto;
+  width: 90%;
+  height: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.246);
+  padding: 0 20px 0 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.loaderr {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question {
+  text-align: center;
+  font-size: 26px;
+}
+
+.answers {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.question-btn {
+  font-family: "Architects Daughter", cursive;
+  min-height: 40px;
+  height: auto;
+  outline: none;
+  border: none;
+  background: #46b9b3;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.question-btn:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.171);
+  background: #41aaa5;
+}
+
+.next-btn {
+  font-family: "Architects Daughter", cursive;
+  min-height: 40px;
+  height: auto;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  background: #79d24d;
+  transform: translateX(100%);
+  display: block;
+  width: 50%;
+}
+
+.next-btn:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.171);
+  background: #6dbd44;
+}
+
+.end-container {
+  margin: 4rem auto;
+  width: 80%;
+  height: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.246);
+  padding: 0 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  gap: 10px;
+}
+.title-end {
+  margin-top: -10px;
+}
+
+.par-end {
+  text-align: center;
+  font-size: 20px;
+  margin-top: -10px;
+}
+.btn-end {
+  font-family: "Architects Daughter", cursive;
+  min-height: 40px;
+  height: auto;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  background: #79d24d;
+  display: block;
+  width: 70%;
+  border-radius: 5px;
+}
+
+.btn-end:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.171);
+  background: #6dbd44;
+}
+
+@media screen and (min-width: 768px) {
+  .main-Container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .form-container {
+    width: 95%;
+    min-height: 500px;
+    height: auto;
+    padding-left: 40px;
+    background: #fff;
+    margin: 3rem auto;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .title {
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  .cateogry-Container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cateogry-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .categoryIMG {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    height: 240px;
+    width: 180px;
+    padding: 10px;
+  }
+  .categoryIMG img {
+    width: 150px;
+    height: 120px;
+    object-fit: contain;
+  }
+
+  .categoryIMG:hover {
+    border-radius: 10px;
+    padding: 9px;
+    border: 1px solid rgb(194, 193, 193);
+  }
+
+  .categoryIMG label {
+    font-size: 20px;
+  }
+
+  .form-dificulty {
+    width: 660px;
+    height: 280px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .DificultyImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    cursor: pointer;
+    height: 220px;
+    width: 150px;
+    padding: 10px;
+  }
+
+  .form-dificulty img {
+    width: 180px;
+    height: 140px;
+    object-fit: contain;
+  }
+
+  .DificultyImg label {
+    font-size: 20px;
+  }
+
+  .DificultyImg:hover {
+    border-radius: 10px;
+    padding: 9px;
+    border: 1px solid rgb(194, 193, 193);
+  }
+
+  .category-chosen {
+    text-align: center;
+  }
+
+  .chosen {
+    text-align: center;
+    color: red;
+  }
+  .title-difficulty {
+    text-align: center;
+  }
+
+  .submit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .submit-form input {
+    height: 30px;
+    width: 400px;
+    font-size: 20px;
+    font-family: "Architects Daughter", cursive;
+  }
+
+  .submit-form label {
+    font-size: 20px;
+  }
+
+  .btn-form {
+    font-family: "Architects Daughter", cursive;
+    background: #46b9b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    height: 30px;
+    width: 200px;
+    font-size: 18px;
+  }
+
+  .error-text {
+    padding-top: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: red;
+  }
+
+  .questions-container {
+    margin: 4rem auto;
+    width: 80%;
+    height: 500px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.246);
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .loaderr {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .question {
+    text-align: center;
+    font-size: 26px;
+  }
+
+  .answers {
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .question-btn {
+    font-family: "Architects Daughter", cursive;
+    height: 40px;
+    outline: none;
+    border: none;
+    background: #46b9b3;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .question-btn:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.171);
+    background: #41aaa5;
+  }
+
+  .next-btn {
+    font-family: "Architects Daughter", cursive;
+    height: 40px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    background: #79d24d;
+    transform: translateX(100%);
+    display: block;
+    width: 50%;
+  }
+
+  .next-btn:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.171);
+    background: #6dbd44;
+  }
+
+  .end-container {
+    margin: 4rem auto;
+    width: 90%;
+    height: 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.246);
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    gap: 10px;
+  }
+  .title-end {
+    margin-top: -10px;
+  }
+
+  .par-end {
+    font-size: 25px;
+    margin-top: -10px;
+  }
+  .btn-end {
+    font-family: "Architects Daughter", cursive;
+    height: 40px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    background: #79d24d;
+    display: block;
+    width: 40%;
+  }
+
+  .btn-end:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.171);
+    background: #6dbd44;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main-Container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .form-container {
+    width: 60%;
+    min-height: 500px;
+    height: auto;
+    padding-left: 40px;
+    background: #fff;
+    margin: 3rem auto;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .title {
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  .cateogry-Container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cateogry-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 80%;
+  }
+
+  .categoryIMG {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    height: 240px;
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+  }
+  .categoryIMG img {
+    width: 200px;
+    height: 160px;
+    object-fit: contain;
+  }
+
+  .categoryIMG:hover {
+    border-radius: 10px;
+    padding: 9px;
+    border: 1px solid rgb(194, 193, 193);
+  }
+
+  .categoryIMG label {
+    font-size: 20px;
+  }
+
+  .form-dificulty {
+    width: 80%;
+    height: 260px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .DificultyImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    cursor: pointer;
+    height: 220px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .form-dificulty img {
+    width: 200px;
+    height: 160px;
+    object-fit: contain;
+  }
+
+  .DificultyImg label {
+    font-size: 20px;
+  }
+
+  .DificultyImg:hover {
+    border-radius: 10px;
+    padding: 9px;
+    border: 1px solid rgb(194, 193, 193);
+  }
+
+  .category-chosen {
+    text-align: center;
+  }
+
+  .chosen {
+    text-align: center;
+    color: red;
+  }
+  .title-difficulty {
+    text-align: center;
+  }
+
+  .submit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .submit-form input {
+    height: 30px;
+    width: 400px;
+    font-size: 20px;
+    font-family: "Architects Daughter", cursive;
+  }
+
+  .submit-form label {
+    font-size: 20px;
+  }
+
+  .btn-form {
+    font-family: "Architects Daughter", cursive;
+    background: #46b9b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    height: 30px;
+    width: 200px;
+    font-size: 18px;
+  }
+
+  .error-text {
+    padding-top: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: red;
+  }
+
+  .questions-container {
+    margin: 4rem auto;
+    width: 850px;
+    min-height: 500px;
+    height: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.246);
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .loaderr {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .question {
+    text-align: center;
+    font-size: 26px;
+  }
+
+  .answers {
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .question-btn {
+    font-family: "Architects Daughter", cursive;
+    height: 40px;
+    outline: none;
+    border: none;
+    background: #46b9b3;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .question-btn:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.171);
+    background: #41aaa5;
+  }
+
+  .next-btn {
+    font-family: "Architects Daughter", cursive;
+    height: 40px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    background: #79d24d;
+    transform: translateX(100%);
+    display: block;
+    width: 50%;
+  }
+
+  .next-btn:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.171);
+    background: #6dbd44;
+  }
+
+  .end-container {
+    margin: 4rem auto;
+    width: 900px;
+    height: 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.246);
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    gap: 10px;
+  }
+  .title-end {
+    margin-top: -10px;
+  }
+
+  .par-end {
+    margin-top: -10px;
+  }
+  .btn-end {
+    font-family: "Architects Daughter", cursive;
+    height: 40px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    background: #79d24d;
+    display: block;
+    width: 40%;
+  }
+
+  .btn-end:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.171);
+    background: #6dbd44;
+  }
+}

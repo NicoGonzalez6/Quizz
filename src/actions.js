@@ -1,0 +1,10 @@
+export const SET_CATEGORY = "SET_CATEGORY";
+export const SET_DIFFICULTY = "SET_DIFFICULTY";
+export const SET_AMOUNT = "SET_AMOUNT";
+export const SET_ERROR = "SET_ERROR";
+export const SET_WAITING = "SET_WAITING";
+export const SET_LOADING = "SET_LOADING";
+export const SET_QUESTIONS = "SET_QUESTIONS";
+export const SET_NXTQUESTION = "SET_NXTQUESTION";
+export const SET_CORRECT = "SET_CORRECT";
+export const SET_RESET = "SET_RESET";
